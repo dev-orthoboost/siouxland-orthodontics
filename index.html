@@ -3,8 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siouxland Orthodontics | Braces &amp; Invisalign in Sioux City, Le Mars &amp; Wayne</title>
+<title>Orthodontist | Siouxland Orthodontics</title>
 <meta name="description" content="Get the straight, confident smile you deserve. Braces, clear aligners, and airway-focused orthodontics for kids, teens, and adults at four Siouxland locations. Free consultations with Dr. Aaron Williams.">
+<!-- TODO at launch: swap the Pages URLs below for the confirmed client domain -->
+<link rel="icon" type="image/png" href="assets/logo-stacked.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orthodontist | Siouxland Orthodontics">
+<meta property="og:description" content="Braces, clear aligners, and airway-focused orthodontics for kids, teens, and adults. Four locations in Sioux City, Le Mars, and Wayne. Free consultations.">
+<meta property="og:url" content="https://dev-orthoboost.github.io/siouxland-orthodontics/">
+<meta property="og:image" content="https://dev-orthoboost.github.io/siouxland-orthodontics/assets/logo-main.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://dev-orthoboost.github.io/siouxland-orthodontics/#org",
+      "name": "Siouxland Orthodontics",
+      "description": "Orthodontic practice offering braces, clear aligners, and airway-focused orthodontics for kids, teens, and adults.",
+      "medicalSpecialty": "Orthodontic",
+      "url": "https://dev-orthoboost.github.io/siouxland-orthodontics/",
+      "logo": "https://dev-orthoboost.github.io/siouxland-orthodontics/assets/logo-main.png",
+      "founder": { "@type": "Person", "name": "Dr. Aaron Williams", "jobTitle": "Orthodontist", "honorificSuffix": "DDS, MS" }
+    },
+    {
+      "@type": "Dentist",
+      "name": "Siouxland Orthodontics - Morningside",
+      "parentOrganization": { "@id": "https://dev-orthoboost.github.io/siouxland-orthodontics/#org" },
+      "telephone": "+17122762766",
+      "address": { "@type": "PostalAddress", "streetAddress": "4224 Sergeant Rd", "addressLocality": "Sioux City", "addressRegion": "IA", "postalCode": "51106", "addressCountry": "US" }
+    },
+    {
+      "@type": "Dentist",
+      "name": "Siouxland Orthodontics - Leeds",
+      "parentOrganization": { "@id": "https://dev-orthoboost.github.io/siouxland-orthodontics/#org" },
+      "telephone": "+17122390420",
+      "address": { "@type": "PostalAddress", "streetAddress": "2801 Outer Dr N", "addressLocality": "Sioux City", "addressRegion": "IA", "postalCode": "51104", "addressCountry": "US" }
+    },
+    {
+      "@type": "Dentist",
+      "name": "Siouxland Orthodontics - Le Mars",
+      "parentOrganization": { "@id": "https://dev-orthoboost.github.io/siouxland-orthodontics/#org" },
+      "telephone": "+17125465179",
+      "address": { "@type": "PostalAddress", "streetAddress": "405 Plymouth St NW", "addressLocality": "Le Mars", "addressRegion": "IA", "postalCode": "51031", "addressCountry": "US" }
+    },
+    {
+      "@type": "Dentist",
+      "name": "Siouxland Orthodontics - Wayne",
+      "parentOrganization": { "@id": "https://dev-orthoboost.github.io/siouxland-orthodontics/#org" },
+      "telephone": "+14028331333",
+      "address": { "@type": "PostalAddress", "streetAddress": "617 Pearl St Ste #2", "addressLocality": "Wayne", "addressRegion": "NE", "postalCode": "68787", "addressCountry": "US" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=Argentum+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -21,18 +74,25 @@
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav" id="nav">
+    <!-- Nav per the OrthoBoost standard (Notion, Sitemap Optimization): About / Services / Locations / CTA last.
+         Anchors become /about/, /services/<service>/, /locations/<office>/ pages in the internal-pages phase. -->
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#dr-williams">About</a>
+      <div class="has-sub">
+        <a href="#care" aria-haspopup="true">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
+        <div class="sub">
+          <a href="#care">Braces</a>
+          <a href="#care">Clear Braces</a>
+          <a href="#care">Invisalign &amp; Clear Aligners</a>
+          <a href="#airway">Airway-Focused Orthodontics</a>
+          <a href="#care">Early Evaluations</a>
+          <a href="#care">Retainers</a>
+        </div>
+      </div>
       <a href="#locations">Locations</a>
-      <a href="#care">Braces</a>
-      <a href="#care">Aligners</a>
-      <a href="#airway">Airway</a>
-      <a href="#care">Kids &amp; Teens</a>
-      <a href="#care">Adults</a>
-      <a href="#footer">Payment Options</a>
-      <a href="#dr-williams">About Us</a>
       <a href="#footer">Contact</a>
     </nav>
-    <a class="btn" href="request-appointment.html">Request a Free Consult</a>
+    <a class="btn" href="appointment-request.html">Request a Free Consult</a>
   </div>
 </header>
 
@@ -115,7 +175,7 @@
 <!-- ===== Primary CTA ===== -->
 <section class="cta">
   <div class="wrap">
-    <a class="btn btn--big" href="request-appointment.html">Request a Free Consult <span class="arrow">&rarr;</span></a>
+    <a class="btn btn--big" href="appointment-request.html">Request a Free Consult <span class="arrow">&rarr;</span></a>
     <p class="cta__reassure">
       <span>No referral needed</span><span class="dot">&bull;</span>
       <span>Most insurance accepted</span><span class="dot">&bull;</span>
@@ -127,7 +187,7 @@
 <!-- ===== Locations ===== -->
 <section class="locations" id="locations">
   <div class="wrap">
-    <div class="sechead"><h2>Four Locations to Choose From</h2></div>
+    <div class="sechead reveal"><h2>Four Locations to Choose From</h2></div>
     <div class="loc-grid">
       <article class="loc-card reveal">
         <div class="photo"><span class="tag">OFFICE PHOTO SOON</span><span class="sun"></span></div>
@@ -177,7 +237,7 @@
 <!-- ===== Care grid (Family Plans + Mouthguards removed per founder call) ===== -->
 <section class="care" id="care">
   <div class="wrap">
-    <div class="sechead">
+    <div class="sechead reveal">
       <h2>Orthodontic Care for Every Age and Stage</h2>
       <p>Braces and clear aligners for kids, teens, and adults. Every plan starts with a friendly, no-pressure look at your smile.</p>
     </div>
@@ -222,10 +282,11 @@
       <h2>Airway-Focused Orthodontics</h2>
       <p>Straight teeth are only part of the story. Dr. Williams also looks at how your child breathes, sleeps, and grows. An airway-focused approach considers the jaw, palate, and airway together, and treatment is designed to support healthy breathing and better sleep alongside a confident smile.</p>
       <p>Wondering about snoring, mouth breathing, or restless sleep? Bring it up at your free consult. We will take a look together and explain what we see in plain language.</p>
-      <a class="btn" href="request-appointment.html">Ask About Airway Care <span class="arrow">&rarr;</span></a>
+      <a class="btn" href="appointment-request.html">Ask About Airway Care <span class="arrow">&rarr;</span></a>
       <p class="fineprint">Every child is different. An evaluation with Dr. Williams is the only way to know what may help your family. This information is educational and is not a diagnosis or a substitute for professional care.</p>
     </div>
     <ul class="airway__list">
+<!-- reveal items -->
       <li>
         <span class="ico" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
@@ -326,7 +387,7 @@
     <div>
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="request-appointment.html">Request a Free Consult</a></li>
+        <li><a href="appointment-request.html">Request a Free Consult</a></li>
         <li><a href="#care">Braces &amp; Aligners</a></li>
         <li><a href="#airway">Airway-Focused Care</a></li>
         <li><a href="#dr-williams">About Dr. Williams</a></li>
@@ -339,7 +400,7 @@
   </div>
 </footer>
 
-<a class="sticky-cta" href="request-appointment.html">&#128197;&nbsp; Request a Free Consult</a>
+<a class="sticky-cta" href="appointment-request.html">&#128197;&nbsp; Request a Free Consult</a>
 
 <script>
 function toggleNav(btn){
@@ -347,10 +408,18 @@ function toggleNav(btn){
   const open = nav.classList.toggle('open');
   btn.setAttribute('aria-expanded', open);
 }
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-}), { threshold: .15 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+if ('IntersectionObserver' in window) {
+  document.documentElement.classList.add('anim');
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+  // stagger siblings within the same parent for a gentle cascade
+  document.querySelectorAll('.reveal').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    el.style.setProperty('--stagger', Math.min(sibs.indexOf(el), 5));
+    io.observe(el);
+  });
+}
 </script>
 </body>
 </html>

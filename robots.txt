@@ -1,0 +1,7 @@
+# NOTE: robots.txt only takes effect at a domain root, so this file is inert on
+# the github.io preview subpath. It becomes live when the custom domain lands.
+User-agent: *
+Allow: /
+Disallow: /concept-2.html
+
+Sitemap: https://dev-orthoboost.github.io/siouxland-orthodontics/sitemap.xml
