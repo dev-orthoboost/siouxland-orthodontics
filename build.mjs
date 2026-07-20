@@ -3,6 +3,7 @@
 // location pages, sitemap.xml, and per-location JSON-LD from data/locations.json.
 // Usage: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const SITE = "https://dev-orthoboost.github.io/siouxland-orthodontics"; // TODO at launch: real domain
 const read = (p) => readFileSync(p, "utf8");
@@ -16,6 +17,9 @@ function render(tpl, vars) {
   });
 }
 
+// content-hash the stylesheet so CDN/browser caches can never serve stale CSS
+const cssv = createHash("md5").update(read("css/concept2.css")).digest("hex").slice(0, 8);
+
 function shell(bodyTpl, vars) {
   const base = {
     head: partial("head"),
@@ -24,6 +28,7 @@ function shell(bodyTpl, vars) {
     scripts: partial("scripts"),
     year: "2026",
     extraHead: "",
+    cssv,
     ...vars,
   };
   // two passes so partial tokens inside partials resolve
