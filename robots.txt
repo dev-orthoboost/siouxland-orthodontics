@@ -2,6 +2,6 @@
 # the github.io preview subpath. It becomes live when the custom domain lands.
 User-agent: *
 Allow: /
-Disallow: /concept-2.html
+Disallow: /concept-1.html
 
 Sitemap: https://dev-orthoboost.github.io/siouxland-orthodontics/sitemap.xml

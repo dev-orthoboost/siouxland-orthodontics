@@ -1,54 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orthodontist | Siouxland Orthodontics</title>
-<meta name="description" content="Braces, clear aligners, and airway-focused orthodontics for kids, teens, and adults at four Siouxland locations. Free consultations with Dr. Aaron Williams.">
-<!-- TODO at launch: swap Pages URLs for the confirmed client domain -->
-<link rel="icon" type="image/png" href="assets/logo-stacked.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Orthodontist | Siouxland Orthodontics">
-<meta property="og:description" content="Braces, clear aligners, and airway-focused orthodontics for kids, teens, and adults at four Siouxland locations. Free consultations with Dr. Aaron Williams.">
-<meta property="og:url" content="https://dev-orthoboost.github.io/siouxland-orthodontics/">
-<meta property="og:image" content="https://dev-orthoboost.github.io/siouxland-orthodontics/assets/logo-main.png">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/concept2.css">
-
+{{head}}
 </head>
 <body>
 
-<header class="wrap">
-  <div class="nav-inner">
-    <a class="brand" href="index.html"><img src="assets/logo-horizontal.png" alt="Siouxland Orthodontics"></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
-      <span></span><span></span><span></span>
-    </button>
-    <!-- Nav per the OrthoBoost standard: About / Services / Locations / CTA last -->
-    <nav class="menu" id="menu" aria-label="Main">
-      <a href="index.html#dr-williams">About</a>
-      <div class="has-sub">
-        <a href="index.html#care" aria-haspopup="true">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
-        <div class="sub">
-          <a href="index.html#care">Braces</a>
-          <a href="index.html#care">Clear Braces</a>
-          <a href="index.html#care">Invisalign &amp; Clear Aligners</a>
-          <a href="index.html#care">Airway-Focused Orthodontics</a>
-          <a href="index.html#care">Early Evaluations</a>
-          <a href="index.html#care">Retainers</a>
-        </div>
-      </div>
-      <a href="index.html#locations">Locations</a>
-      <a href="index.html#process">What to Expect</a>
-      <a class="btn btn--outline" href="appointment-request.html">Request a Free Consult</a>
-    </nav>
-  </div>
-</header>
-
+{{header}}
 
 <!-- ===== Hero ===== -->
 <section class="hero wrap">
@@ -332,118 +289,13 @@
       <p>Four offices across Siouxland, so great care is always close to home. Hours shown are current office hours; call to confirm during the transition.</p>
     </div>
     <div class="loc-grid2">
-
-      <div class="loc2">
-        <h3><span class="pin" style="background:#6B3F82"></span>Morningside</h3>
-        <p>Our main office. Fast, modern orthodontics that fits your family's schedule, on Sergeant Road in Morningside.</p>
-        <span class="meta">4224 Sergeant Rd, Sioux City, IA &middot; <a class="tel" href="tel:+17122762766">(712) 276-2766</a></span>
-        <span class="meta">Hours: Mon to Wed 8 to 4 · Fri 8 to 12</span>
-        <a class="loc-link" href="locations/morningside/">Visit the Morningside office &rarr;</a>
-      </div>
-
-      <div class="loc2">
-        <h3><span class="pin" style="background:#415B2F"></span>Leeds</h3>
-        <p>Your neighborhood braces team on the north side, serving Leeds and the surrounding Sioux City neighborhoods.</p>
-        <span class="meta">2801 Outer Dr N, Sioux City, IA &middot; <a class="tel" href="tel:+17122390420">(712) 239-0420</a></span>
-        <span class="meta">Hours: Thu 8 to 4</span>
-        <a class="loc-link" href="locations/leeds/">Visit the Leeds office &rarr;</a>
-      </div>
-
-      <div class="loc2">
-        <h3><span class="pin" style="background:#A42C42"></span>Le Mars</h3>
-        <p>Big-city orthodontics with small-town relationships, right in downtown Le Mars.</p>
-        <span class="meta">405 Plymouth St NW, Le Mars, IA &middot; <a class="tel" href="tel:+17125465179">(712) 546-5179</a></span>
-        <span class="meta">Hours: Mon 9 to 3</span>
-        <a class="loc-link" href="locations/le-mars/">Visit the Le Mars office &rarr;</a>
-      </div>
-
-      <div class="loc2">
-        <h3><span class="pin" style="background:#4270AF"></span>Wayne</h3>
-        <p>Wayne's hometown orthodontist for families, teachers, and staff, right on Pearl Street.</p>
-        <span class="meta">617 Pearl St Ste #2, Wayne, NE &middot; <a class="tel" href="tel:+14028331333">(402) 833-1333</a></span>
-        <span class="meta">Hours: Wed 9 to 3</span>
-        <a class="loc-link" href="locations/wayne/">Visit the Wayne office &rarr;</a>
-      </div>
+{{locCards}}
     </div>
   </div>
 </section>
 
-<div class="wrap">
-  <footer class="footer2" id="footer">
-    <div class="footer2-top">
-      <img src="assets/logo-horizontal.png" alt="Siouxland Orthodontics">
-      <nav aria-label="Footer">
-        <a href="index.html#care">Our Care</a>
-        <a href="index.html#airway">Airway-Focused</a>
-        <a href="index.html#reviews">Reviews</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#dr-williams">About</a>
-      </nav>
-      <a class="btn btn--gold" href="appointment-request.html">Request a Free Consult</a>
-    </div>
-    <div class="footer2-cols">
-      <div>
-        <h4>Visit Us</h4>
-        <ul>
-          <li><a href="locations/morningside/">Morningside</a> &middot; 4224 Sergeant Rd, Sioux City, IA &middot; <a href="tel:+17122762766">(712) 276-2766</a></li>
-          <li><a href="locations/leeds/">Leeds</a> &middot; 2801 Outer Dr N, Sioux City, IA &middot; <a href="tel:+17122390420">(712) 239-0420</a></li>
-          <li><a href="locations/le-mars/">Le Mars</a> &middot; 405 Plymouth St NW, Le Mars, IA &middot; <a href="tel:+17125465179">(712) 546-5179</a></li>
-          <li><a href="locations/wayne/">Wayne</a> &middot; 617 Pearl St Ste #2, Wayne, NE &middot; <a href="tel:+14028331333">(402) 833-1333</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Good to Know</h4>
-        <ul>
-          <li>Free first consultation, no referral needed</li>
-          <li>Most insurance accepted, flexible payment plans</li>
-          <li>One trusted doctor at every visit</li>
-          <li>Continuing 30+ years of care in Siouxland</li>
-        </ul>
-      </div>
-    </div>
-    <div class="legal2">
-      <span>&copy; 2026 Siouxland Orthodontics. All rights reserved.</span>
-      <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">HIPAA Notice</a>
-      <a href="#top" class="totop">Back to top &uarr;</a>
-    </div>
-  </footer>
-</div>
+{{footer}}
 
-
-<script>
-function toggleNav(btn){
-  const m = document.getElementById('menu');
-  const open = m.classList.toggle('open');
-  btn.setAttribute('aria-expanded', open);
-}
-if ('IntersectionObserver' in window) {
-  document.documentElement.classList.add('anim');
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => {
-    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
-    el.style.setProperty('--stagger', Math.min(sibs.indexOf(el), 5));
-    io.observe(el);
-  });
-  // animated stat counters
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    cio.unobserve(e.target);
-    const el = e.target, target = parseInt(el.dataset.count, 10);
-    if (reduced) { el.textContent = target; return; }
-    const t0 = performance.now(), dur = 1200;
-    const tick = (t) => {
-      const p = Math.min((t - t0) / dur, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }), { threshold: .4 });
-  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
-}
-</script>
-
+{{scripts}}
 </body>
 </html>

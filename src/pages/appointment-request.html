@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+{{head}}
+</head>
+<body>
+
+{{header}}
+
+<section class="loc-hero wrap" style="text-align:center;">
+  <h1>Your First Visit Is <span class="hl">On Us.</span></h1>
+  <p class="lede" style="margin:0 auto;">Getting started is easy. Tell us a little about you, and our team will reach out to find a time that works. No referral needed, and no pressure.</p>
+</section>
+
+<main class="wrap" style="max-width:760px;">
+  <div class="visit-card" style="background:var(--white);">
+    <!--
+      GHL WIRING (Amy): replace the submit handler below with the Go High Level
+      form endpoint / embed once the backend is set up. Field names are kept
+      simple and mappable: first_name, last_name, phone, email, patient_for,
+      location, interest, message.
+    -->
+    <form id="consult-form" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Who is this visit for?</legend>
+        <div class="chip-group">
+          <label><input type="radio" name="patient_for" value="my-child" checked><span>My child</span></label>
+          <label><input type="radio" name="patient_for" value="my-teen"><span>My teen</span></label>
+          <label><input type="radio" name="patient_for" value="myself"><span>Myself</span></label>
+          <label><input type="radio" name="patient_for" value="not-sure"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="location">Preferred location</label>
+        <select id="location" name="location">
+          <option value="">No preference, closest works</option>
+          <option value="morningside">Morningside (Sioux City, IA)</option>
+          <option value="leeds">Leeds (Sioux City, IA)</option>
+          <option value="lemars">Le Mars, IA</option>
+          <option value="wayne">Wayne, NE</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>What are you interested in?</legend>
+        <div class="chip-group">
+          <label><input type="checkbox" name="interest" value="braces"><span>Braces</span></label>
+          <label><input type="checkbox" name="interest" value="clear-aligners"><span>Clear aligners / Invisalign</span></label>
+          <label><input type="checkbox" name="interest" value="airway"><span>Airway-focused care</span></label>
+          <label><input type="checkbox" name="interest" value="early-eval"><span>Early evaluation</span></label>
+          <label><input type="checkbox" name="interest" value="not-sure"><span>Not sure, help me decide</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="message">Anything you'd like us to know?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Questions, concerns, or the best time to reach you."></textarea>
+        <p class="hint">Please don't include medical details here. We'll cover everything at your visit.</p>
+      </div>
+
+      <button class="btn btn--coral" type="submit" style="width:100%;">
+        Request My Free Consult &rarr;
+      </button>
+      <p class="form-note">We'll only use your info to schedule your visit. See our Privacy Policy and HIPAA Notice.</p>
+    </form>
+
+    <div class="form-success" id="form-success">
+      <h2>Thank you! We got your request.</h2>
+      <p>Our team will reach out shortly to find a time that works for you. We're looking forward to meeting you.</p>
+      <p style="margin-top:18px;"><a class="btn btn--outline" href="{{root}}index.html">Back to Home</a></p>
+    </div>
+  </div>
+</main>
+
+{{footer}}
+
+{{scripts}}
+<script>
+document.getElementById('consult-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  this.style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+{{head}}
+</head>
+<body>
+
+{{header}}
+
+<!-- ===== Location hero ===== -->
+<section class="loc-hero wrap">
+  <span class="eyebrow">SIOUXLAND ORTHODONTICS &middot; {{locName}} OFFICE</span>
+  <div class="accent-bar" style="background:{{pin}}"></div>
+  <h1>Orthodontist in <span class="hl">{{cityLabel}}</span></h1>
+  <p class="lede">{{blurb}}</p>
+  {{former}}
+  <div class="hero-ctas" style="margin-top:26px;">
+    <a class="btn btn--coral" href="{{root}}appointment-request.html">Request a Free Consult</a>
+    <a class="call" href="tel:{{phoneHref}}">or call {{phone}}</a>
+  </div>
+</section>
+
+<!-- ===== Visit block ===== -->
+<section class="wrap">
+  <div class="sec-intro">
+    <span class="pill">Visit Us</span>
+    <p>Easy to find, easy to reach. Booking starts with a short conversation.</p>
+  </div>
+  <div class="visit-grid">
+    <div class="visit-card reveal">
+      <h3>Address</h3>
+      <p>{{address}}, {{cityLabel}} {{zip}}<br>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query={{mapQuery}}" target="_blank" rel="noopener">Get directions</a></p>
+      <h3>Phone</h3>
+      <p><a href="tel:{{phoneHref}}">{{phone}}</a></p>
+      <h3>Office Hours</h3>
+      <table class="hours-table">
+        <tbody>
+            {{hoursRows}}
+        </tbody>
+      </table>
+      <p class="hours-note">Hours can change during the practice transition. Give us a quick call to confirm before you drive over.</p>
+    </div>
+    <div class="map-frame reveal">
+      <iframe src="https://www.google.com/maps?q={{mapQuery}}&amp;output=embed" loading="lazy" title="Map to Siouxland Orthodontics {{locName}} office" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Known for ===== -->
+<section class="wrap">
+  <div class="sec-intro">
+    <span class="pill">Why Families Choose {{locName}}</span>
+    <p>Braces, clear aligners, and airway-focused care for kids, teens, and adults.</p>
+  </div>
+  <ul class="known">
+          {{knownFor}}
+  </ul>
+</section>
+
+<!-- ===== Testimonials (source: practice-published, see homepage note) ===== -->
+<section class="wrap">
+  <div class="reviews-grid">
+    <div class="review reveal">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p>"I was scared to get braces but they made it easy. The staff is amazing; they do an excellent job. I love this place."</p>
+      <span class="who">R.V., patient</span>
+    </div>
+    <div class="review reveal">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p>"The people are friendly. They always ask me if something hurts and care for me!"</p>
+      <span class="who">L.H., patient</span>
+    </div>
+    <div class="review reveal">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p>"The staff was extremely helpful and super nice. Makes it easy on the kids."</p>
+      <span class="who">G.M., parent</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA banner ===== -->
+<section class="wrap">
+  <div class="banner">
+    <div>
+      <h2>Ready when you are.</h2>
+      <p>Your first visit at our {{locName}} office is on us. Meet Dr. Williams and leave with a clear plan.</p>
+      <a class="btn btn--coral" href="{{root}}appointment-request.html">Request a Free Consult</a>
+    </div>
+    <div class="burst" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="60" fill="#FFDC49"/>
+        <g stroke="#121520" stroke-width="3" stroke-linecap="round">
+          <path d="M100 10v30M100 160v30M10 100h30M160 100h30M36 36l21 21M143 143l21 21M164 36l-21 21M57 143l-21 21"/>
+        </g>
+        <circle cx="100" cy="100" r="34" fill="#F65822"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+{{footer}}
+
+{{scripts}}
+</body>
+</html>
