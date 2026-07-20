@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/concept2.css?v=fae51363">
+<link rel="stylesheet" href="../../css/concept2.css?v=a634e23b">
 
 </head>
 <body>
@@ -222,6 +222,42 @@ if ('IntersectionObserver' in window) {
   }), { threshold: .4 });
   document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 }
+// testimonials carousel (scroll-snap + arrows + dots)
+(function(){
+  const track = document.querySelector('.testi-track');
+  if (!track) return;
+  const items = [...track.querySelectorAll('.testi-item')];
+  const dotsBox = document.querySelector('.t-dots');
+  const prev = document.querySelector('.t-prev');
+  const next = document.querySelector('.t-next');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(i){
+    i = Math.max(0, Math.min(i, items.length - 1));
+    const it = items[i];
+    track.scrollTo({ left: it.offsetLeft - (track.clientWidth - it.clientWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+  }
+  items.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 't-dot'; d.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+    d.addEventListener('click', () => go(i));
+    dotsBox.appendChild(d);
+  });
+  const dots = [...dotsBox.children];
+  let cur = 0;
+  function sync(){
+    const mid = track.scrollLeft + track.clientWidth / 2;
+    cur = items.reduce((best, it, i) =>
+      Math.abs(it.offsetLeft + it.clientWidth / 2 - mid) <
+      Math.abs(items[best].offsetLeft + items[best].clientWidth / 2 - mid) ? i : best, 0);
+    dots.forEach((d, i) => d.classList.toggle('on', i === cur));
+    prev.disabled = cur === 0;
+    next.disabled = cur === items.length - 1;
+  }
+  track.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
+  prev.addEventListener('click', () => go(cur - 1));
+  next.addEventListener('click', () => go(cur + 1));
+  sync();
+})();
 </script>
 
 </body>
