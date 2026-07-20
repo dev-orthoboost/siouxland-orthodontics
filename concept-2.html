@@ -19,13 +19,22 @@
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
       <span></span><span></span><span></span>
     </button>
-    <nav class="menu" id="menu">
+    <!-- Nav per the OrthoBoost standard: About / Services / Locations / CTA last -->
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#dr-williams">About</a>
+      <div class="has-sub">
+        <a href="#care" aria-haspopup="true">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
+        <div class="sub">
+          <a href="#care">Braces</a>
+          <a href="#care">Clear Braces</a>
+          <a href="#care">Invisalign &amp; Clear Aligners</a>
+          <a href="#care">Airway-Focused Orthodontics</a>
+          <a href="#care">Early Evaluations</a>
+          <a href="#care">Retainers</a>
+        </div>
+      </div>
       <a href="#locations">Locations</a>
-      <a href="#care">Braces</a>
-      <a href="#care">Aligners</a>
-      <a href="#care">Airway</a>
       <a href="#process">What to Expect</a>
-      <a href="#dr-williams">About Us</a>
       <a class="btn btn--outline" href="appointment-request.html">Request a Free Consult</a>
     </nav>
   </div>
