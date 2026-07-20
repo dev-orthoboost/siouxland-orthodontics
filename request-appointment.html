@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Free Consult | Siouxland Orthodontics</title>
+<meta name="description" content="Request your free orthodontic consultation with Dr. Aaron Williams at Siouxland Orthodontics. Four convenient locations in Sioux City, Le Mars, and Wayne. No referral needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=Argentum+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="logo" href="index.html" aria-label="Siouxland Orthodontics home">
+      <img src="assets/logo-horizontal.png" alt="Siouxland Orthodontics">
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html#locations">Locations</a>
+      <a href="index.html#care">Braces</a>
+      <a href="index.html#care">Aligners</a>
+      <a href="index.html#airway">Airway</a>
+      <a href="index.html#care">Kids &amp; Teens</a>
+      <a href="index.html#care">Adults</a>
+      <a href="index.html#footer">Payment Options</a>
+      <a href="index.html#dr-williams">About Us</a>
+      <a href="index.html#footer">Contact</a>
+    </nav>
+    <a class="btn" href="request-appointment.html">Request a Free Consult</a>
+  </div>
+</header>
+
+<section class="form-hero">
+  <div class="wrap">
+    <h1>Your First Visit Is <span class="accent">On Us.</span></h1>
+    <p>Getting started is easy. Tell us a little about you, and our team will reach out to find a time that works. No referral needed, and no pressure.</p>
+  </div>
+</section>
+
+<div class="form-wrap">
+  <div class="form-card">
+    <!--
+      GHL WIRING (Amy): replace the submit handler below with the Go High Level
+      form endpoint / embed once the backend is set up. Field names are kept
+      simple and mappable: first_name, last_name, phone, email, patient_for,
+      location, interest, message.
+    -->
+    <form id="consult-form" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Who is this visit for?</legend>
+        <div class="chip-group">
+          <label><input type="radio" name="patient_for" value="my-child" checked><span>My child</span></label>
+          <label><input type="radio" name="patient_for" value="my-teen"><span>My teen</span></label>
+          <label><input type="radio" name="patient_for" value="myself"><span>Myself</span></label>
+          <label><input type="radio" name="patient_for" value="not-sure"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="location">Preferred location</label>
+        <select id="location" name="location">
+          <option value="">No preference, closest works</option>
+          <option value="morningside">Morningside (Sioux City, IA)</option>
+          <option value="leeds">Leeds (Sioux City, IA)</option>
+          <option value="lemars">Le Mars, IA</option>
+          <option value="wayne">Wayne, NE</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>What are you interested in?</legend>
+        <div class="chip-group">
+          <label><input type="checkbox" name="interest" value="braces"><span>Braces</span></label>
+          <label><input type="checkbox" name="interest" value="clear-aligners"><span>Clear aligners / Invisalign</span></label>
+          <label><input type="checkbox" name="interest" value="airway"><span>Airway-focused care</span></label>
+          <label><input type="checkbox" name="interest" value="early-eval"><span>Early evaluation</span></label>
+          <label><input type="checkbox" name="interest" value="not-sure"><span>Not sure, help me decide</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="message">Anything you'd like us to know?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Questions, concerns, or the best time to reach you."></textarea>
+        <p class="hint">Please don't include medical details here. We'll cover everything at your visit.</p>
+      </div>
+
+      <button class="btn btn--big" type="submit" style="width:100%; justify-content:center;">
+        Request My Free Consult <span class="arrow">&rarr;</span>
+      </button>
+      <p class="form-note">We'll only use your info to schedule your visit. See our Privacy Policy and HIPAA Notice.</p>
+    </form>
+
+    <div class="form-success" id="form-success">
+      <h2>Thank you! We got your request.</h2>
+      <p>Our team will reach out shortly to find a time that works for you. We're looking forward to meeting you.</p>
+      <p style="margin-top:18px;"><a class="btn btn--ghost" href="index.html">Back to Home</a></p>
+    </div>
+  </div>
+
+  <p class="cta__reassure" style="text-align:center; margin-top:26px;">
+    <span>No referral needed</span><span class="dot">&bull;</span>
+    <span>Most insurance accepted</span><span class="dot">&bull;</span>
+    <span>Free consultation</span>
+  </p>
+</div>
+
+<footer id="footer">
+  <div class="legal">
+    &copy; 2026 Siouxland Orthodontics. All rights reserved.
+    <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a> <a href="#">HIPAA Notice</a>
+  </div>
+</footer>
+
+<a class="sticky-cta" href="#consult-form">&#128197;&nbsp; Request a Free Consult</a>
+
+<script>
+function toggleNav(btn){
+  const nav = document.getElementById('nav');
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+// Placeholder submit until GHL endpoint is wired (see comment above the form)
+document.getElementById('consult-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  this.style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+});
+</script>
+</body>
+</html>
