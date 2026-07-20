@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "morningside",
+    "name": "Morningside",
+    "cityLabel": "Sioux City, IA",
+    "city": "Sioux City",
+    "state": "IA",
+    "address": "4224 Sergeant Rd",
+    "zip": "51106",
+    "phone": "(712) 276-2766",
+    "phoneHref": "+17122762766",
+    "pin": "#6B3F82",
+    "hours": [
+      { "days": "Monday", "open": "8:00 AM", "close": "4:00 PM" },
+      { "days": "Tuesday", "open": "8:00 AM", "close": "4:00 PM" },
+      { "days": "Wednesday", "open": "8:00 AM", "close": "4:00 PM" },
+      { "days": "Friday", "open": "8:00 AM", "close": "12:00 PM" }
+    ],
+    "hoursSummary": "Mon to Wed 8 to 4 · Fri 8 to 12",
+    "schemaHours": [
+      { "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "08:00", "closes": "16:00" },
+      { "dayOfWeek": ["Friday"], "opens": "08:00", "closes": "12:00" }
+    ],
+    "blurb": "Our main office. Fast, modern orthodontics that fits your family's schedule, on Sergeant Road in Morningside.",
+    "knownFor": [
+      "Our most appointment days each week",
+      "Digital scans and 3D imaging on site",
+      "Easy parking right off Sergeant Road"
+    ],
+    "mapQuery": "4224 Sergeant Rd, Sioux City, IA 51106",
+    "formerName": null
+  },
+  {
+    "slug": "leeds",
+    "name": "Leeds",
+    "cityLabel": "Sioux City, IA",
+    "city": "Sioux City",
+    "state": "IA",
+    "address": "2801 Outer Dr N",
+    "zip": "51104",
+    "phone": "(712) 239-0420",
+    "phoneHref": "+17122390420",
+    "pin": "#415B2F",
+    "hours": [
+      { "days": "Thursday", "open": "8:00 AM", "close": "4:00 PM" }
+    ],
+    "hoursSummary": "Thu 8 to 4",
+    "schemaHours": [
+      { "dayOfWeek": ["Thursday"], "opens": "08:00", "closes": "16:00" }
+    ],
+    "blurb": "Your neighborhood braces team on the north side, serving Leeds and the surrounding Sioux City neighborhoods.",
+    "knownFor": [
+      "Convenient north-side Sioux City location",
+      "Same doctor, same care as our main office",
+      "Great for families near Leeds and Outer Drive"
+    ],
+    "mapQuery": "2801 Outer Dr N, Sioux City, IA 51104",
+    "formerName": "Indian Hills"
+  },
+  {
+    "slug": "le-mars",
+    "name": "Le Mars",
+    "cityLabel": "Le Mars, IA",
+    "city": "Le Mars",
+    "state": "IA",
+    "address": "405 Plymouth St NW",
+    "zip": "51031",
+    "phone": "(712) 546-5179",
+    "phoneHref": "+17125465179",
+    "pin": "#A42C42",
+    "hours": [
+      { "days": "Monday", "open": "9:00 AM", "close": "3:00 PM" }
+    ],
+    "hoursSummary": "Mon 9 to 3",
+    "schemaHours": [
+      { "dayOfWeek": ["Monday"], "opens": "09:00", "closes": "15:00" }
+    ],
+    "blurb": "Big-city orthodontics with small-town relationships, right in downtown Le Mars.",
+    "knownFor": [
+      "Care close to home, no drive to Sioux City",
+      "Airway-focused evaluations for kids",
+      "A friendly team that knows Le Mars families"
+    ],
+    "mapQuery": "405 Plymouth St NW, Le Mars, IA 51031",
+    "formerName": null
+  },
+  {
+    "slug": "wayne",
+    "name": "Wayne",
+    "cityLabel": "Wayne, NE",
+    "city": "Wayne",
+    "state": "NE",
+    "address": "617 Pearl St Ste #2",
+    "zip": "68787",
+    "phone": "(402) 833-1333",
+    "phoneHref": "+14028331333",
+    "pin": "#4270AF",
+    "hours": [
+      { "days": "Wednesday", "open": "9:00 AM", "close": "3:00 PM" }
+    ],
+    "hoursSummary": "Wed 9 to 3",
+    "schemaHours": [
+      { "dayOfWeek": ["Wednesday"], "opens": "09:00", "closes": "15:00" }
+    ],
+    "blurb": "Wayne's hometown orthodontist for families, teachers, and staff, right on Pearl Street.",
+    "knownFor": [
+      "The only orthodontic office in Wayne",
+      "Braces and clear aligners without the long drive",
+      "Appointments that work around school schedules"
+    ],
+    "mapQuery": "617 Pearl St, Wayne, NE 68787",
+    "formerName": null
+  }
+]
